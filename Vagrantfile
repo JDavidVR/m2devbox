@@ -13,5 +13,5 @@ Vagrant.configure("2") do |config|
     vb.memory = "768"
   end
   
-  config.vm.provision "shell", path: "webserver.sh"
+  config.vm.provision "shell", path: "vgrntServer.sh"
 end
