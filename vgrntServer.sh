@@ -32,12 +32,12 @@ sudo a2enconf php7.1-fpm;
 sudo service apache2 restart;
 
 #change apache and php-fpm users and groups
-sudo sed -i.BAK "s;www-data;$USER;" /etc/apache2/envvars;
-sudo sed -i.BAK "s;www-data;$USER;" /etc/php/7.1/fpm/pool.d/www.conf;
+sudo sed -i.BAK "s;www-data;vagrant;" /etc/apache2/envvars;
+sudo sed -i.BAK "s;www-data;vagrant;" /etc/php/7.1/fpm/pool.d/www.conf;
 sudo service apache2 restart;
 sudo service php7.1-fpm restart;
 #change /var/www owner
-sudo chown -R $USER:$USER /var/www/;
+sudo chown -R vagrant:vagrant /var/www/;
 
 #node 8
 # sudo apt install curl -y;
